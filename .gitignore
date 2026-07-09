@@ -1,0 +1,38 @@
+# Visual Studio
+.vs/
+ipch/
+*.ipch
+*.VC.db
+*.opendb
+*.suo
+*.user
+
+# Build folders
+Debug/
+Release/
+x64/
+x86/
+bin/
+obj/
+
+# Python
+__pycache__/
+*.pyc
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Великі архіви
+*.rar
+*.7z
