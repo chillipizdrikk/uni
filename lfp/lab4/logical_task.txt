@@ -1,0 +1,69 @@
+% ============================================
+% Варіант 16 
+% Костянтин запросив свою сестру приїхати до нього в гості. 
+% Після цього він отримав від неї три повідомлення: 
+% - Я приїду в гості, тоді й тільки тоді, якщо зі мною приїде тато. 
+% - Щоб я приїхала, необхідно, щоб мене супроводжувала мама. 
+% - Або ми приїдемо з мамою, або приїде тільки тато. 
+% Коли гості приїхали, виявилося, що тільки одне з цих тверджень було правдивим. 
+% Хто приїхав до Кості?
+% ============================================
+
+% логічні зв’язки
+iff(A, B) :- (A=true, B=true); (A=false, B=false).       % Еквівалентність: A ↔ B
+imp(A, B) :- A=false; B=true.                            % Імплікація: A → B
+
+% твердження сестри
+statement1(S, F, _) :- iff(S, F).                        % 1. Сестра ↔ Тато
+statement2(S, _, M) :- imp(S, M).                        % 2. Сестра → Мама
+statement3(S, F, M) :- (S=true, M=true); (F=true, M=false, S=false).  % 3. (Сестра і мама) або (тільки тато)
+
+% додаткове твердження(модифікація задачі)
+statement4(_, F, _, G) :- imp(F, G).                     % 4. Якщо приїхав тато, то повинна приїхати бабуся
+
+% синтез терма(створюємо терм на основі значень) 
+synthesize(S, F, M, G, guest(S, F, M, G)).     
+
+% декомпозиція терма(витягуємо кожне значення) 
+decompose(guest(S, F, M, G), S, F, M, G).
+
+% рекурсивний підрахунок кількості істинних тверджень
+count_true([], 0).
+count_true([true|T], N) :- count_true(T, N1), N is N1 + 1.
+count_true([false|T], N) :- count_true(T, N).
+
+% основне правило з модифікацією
+solve :-
+    % перебір всіх варіантів
+    member(S, [true, false]),                           
+    member(F, [true, false]),
+    member(M, [true, false]),
+    member(G, [true, false]),
+    % перевірка тверджень і присвоєння значень true/false
+    (statement1(S, F, M) -> A1=true ; A1=false),          
+    (statement2(S, F, M) -> A2=true ; A2=false),          
+    (statement3(S, F, M) -> A3=true ; A3=false),          
+    (statement4(S, F, M, G) -> A4=true ; A4=false),
+    % перевірка чи з списку тверджень тільки одне true
+    count_true([A1, A2, A3, A4], 1),
+    
+    synthesize(S, F, M, G, Term),                         
+    write("Результат як терм: "), write(Term), nl,
+    
+    decompose(Term, S1, F1, M1, G1),                      
+    write("Декомпозиція: Сестра="), write(S1),
+    write(", Тато="), write(F1),
+    write(", Мама="), write(M1),
+    write(", Бабуся="), write(G1), nl,
+    write("Істинність тверджень: ["), write(A1), write(", "), write(A2), write(", "), write(A3), write(", "), write(A4), write("]"), nl,
+    dynamic_update(S1, F1, M1, G1),                       
+    call(statement3(S1, F1, M1)),                         
+    write("call(statement3) успішно виконано."), nl.
+
+% динамічна модифікація бази знань
+dynamic_update(S, F, M, G) :-
+    retractall(arrived(_, _, _, _)),                     % очищення попередніх фактів
+    assert(arrived(S, F, M, G)),                         % додавання нових фактів про те, хто реально приїхав
+    write("Базу знань оновлено: arrived("), write(S), write(", "), write(F), write(", "), write(M), write(", "), write(G), write(")"), nl.
+
+% ?- solve.

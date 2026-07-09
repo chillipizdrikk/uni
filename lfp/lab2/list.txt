@@ -1,0 +1,65 @@
+% перший елемент списку
+first([H|_], H).
+
+% останній елемент списку (пряма рекурсія)
+last([X], X).
+last([_|T], X) :- last(T, X).
+
+% префікс списку
+prefix([], _).
+prefix([H|T1], [H|T2]) :- prefix(T1, T2).
+
+% суфікс списку
+suffix(S, S).
+suffix(S, [_|T]) :- suffix(S, T).
+
+% n-ий елемент списку (комбінована рекурсія)
+nth([H|_], 1, H).
+nth([_|T], N, X) :- N > 1, N1 is N-1, nth(T, N1, X).
+
+% сума елементів списку
+sum([], 0).
+sum([H|T], S) :- sum(T, S1), S is H + S1.
+
+% обернений список (хвостова рекурсія)
+reverse_tail(L, R) :- reverse_tail_acc(L, [], R).
+reverse_tail_acc([], R, R).
+reverse_tail_acc([H|T], A, R) :- reverse_tail_acc(T, [H|A], R).
+
+% побудова списку для завдання (1 пункт)
+build_list(Result) :- build_list(['a','b','c','d'], 4, Result).
+
+build_list([], _, []).
+build_list([H|T], N, [H-N|Rest]) :- N1 is N-1, build_list(T, N1, Rest).
+
+% допоміжний: доступ до елемента матриці
+matrix_elem(Matrix, I, J, Elem) :- nth(Matrix, I, Row), nth(Row, J, Elem).
+
+% перевірка симетричності матриці (2 пункт)
+is_symmetric(Matrix) :- length(Matrix, N), is_symmetric_rows(Matrix, 1, N).
+
+is_symmetric_rows(_, I, N) :- I > N, !.
+is_symmetric_rows(Matrix, I, N) :- is_symmetric_row(Matrix, I, 1, N), I1 is I+1, is_symmetric_rows(Matrix, I1, N).
+
+is_symmetric_row(_, _, J, N) :- J > N, !.
+is_symmetric_row(Matrix, I, J, N) :- matrix_elem(Matrix, I, J, E1), matrix_elem(Matrix, J, I, E2), E1 = E2, J1 is J+1, is_symmetric_row(Matrix, I, J1, N).
+
+
+
+
+
+
+
+
+
+
+
+% ?- first([5,4,3], F).
+% ?- last([1,2,3,4], L).
+% ?- prefix([a,b], [a,b,c]).
+% ?- suffix([b,c], [a,b,c]).
+% ?- sum([1,2,3,4,5], S).
+% ?- reverse_tail([1,2,3], R).
+% ?- build_list(L).
+% ?- nth([a,b,c,d], 3, X).
+% ?- is_symmetric([[1,0,1],[0,1,0],[1,0,1]]).

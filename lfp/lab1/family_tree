@@ -1,0 +1,102 @@
+male(mykola_tryhub).
+male(mykhailo_lezhepekov).
+male(pavlo_lopushinskiy).
+male(vasyl_yaremko).
+male(volodymyr_tryhub_old).
+male(fedir_lopushinskiy_old).
+male(oleksandr_tryhub).
+male(volodymyr_tryhub_young).
+male(vasyl_lopushinskiy).
+male(fedir_lopushinskiy_young).
+male(ivan_humenyuk).
+male(rostyslav_humenyuk).
+
+female(hanna_tryhub).
+female(lubov_lezhepekova).
+female(kateryna_lopushinska).
+female(mariya_yaremko).
+female(nina_tryhub).
+female(stefania_lopushinska).
+female(ruslana_tryhub).
+female(halyna_lopushinska).
+female(marta_tryhub).
+female(nelya_humenyuk).
+
+cat(businka).
+cat(bonya).
+
+married(mykola_tryhub, hanna_tryhub).
+married(mykhailo_lezhepekov, lubov_lezhepekova).
+married(pavlo_lopushinskiy, kateryna_lopushinska).
+married(vasyl_yaremko, mariya_yaremko).
+married(volodymyr_tryhub_old, nina_tryhub).
+married(fedir_lopushinskiy_old, stefania_lopushinska).
+married(volodymyr_tryhub_young, ruslana_tryhub).
+married(vasyl_lopushinskiy, halyna_lopushinska).
+married(ivan_humenyuk, nelya_humenyuk).
+
+parent(mykola_tryhub,volodymyr_tryhub_old).
+parent(hanna_tryhub,volodymyr_tryhub_old).
+
+parent(mykhailo_lezhepekov,nina_tryhub).
+parent(lubov_lezhepekova,nina_tryhub).
+
+parent(pavlo_lopushinskiy,fedir_lopushinskiy_old).
+parent(kateryna_lopushinska,fedir_lopushinskiy_old).
+
+parent(vasyl_yaremko,stefania_lopushinska).
+parent(mariya_yaremko,stefania_lopushinska).
+
+parent(volodymyr_tryhub_old,oleksandr_tryhub).
+parent(nina_tryhub,oleksandr_tryhub).
+
+parent(volodymyr_tryhub_old,volodymyr_tryhub_young).
+parent(nina_tryhub,volodymyr_tryhub_young).
+
+parent(fedir_lopushinskiy_old,ruslana_tryhub).
+parent(stefania_lopushinska,ruslana_tryhub).
+
+parent(fedir_lopushinskiy_old,vasyl_lopushinskiy).
+parent(stefania_lopushinska,vasyl_lopushinskiy).
+
+parent(volodymyr_tryhub_young,marta_tryhub).
+parent(ruslana_tryhub,marta_tryhub).
+
+parent(vasyl_lopushinskiy,fedir_lopushinskiy_young).
+parent(halyna_lopushinska,fedir_lopushinskiy_young).
+
+parent(vasyl_lopushinskiy,nelya_humenyuk).
+parent(halyna_lopushinska,nelya_humenyuk).
+
+parent(ivan_humenyuk,rostyslav_humenyuk).
+parent(nelya_humenyuk,rostyslav_humenyuk).
+
+owner(marta_tryhub, businka).
+owner(marta_tryhub, bonya).
+
+spouse(X,Y):- married(X,Y).
+spouse(X,Y):- married(Y,X).
+
+sister(X,Y) :- female(X), parent(Z,X), parent(Z,Y), X\=Y.
+brother(X,Y):- male(X), parent(Z,X), parent(Z,Y), X\=Y.
+
+uncle(X,Y):- male(X), parent(Z,Y), (brother(X,Z); (sister(M,Z), spouse(X,M))).
+aunt(X,Y):- female(X), parent(Z,Y), (sister(X,Z); (brother(M,Z), spouse(X,M))).
+
+grandmother(X,Y):- female(X), parent(X,Z), parent(Z,Y).
+grandfather(X,Y):- male(X), parent(X,Z), parent(Z,Y).
+
+great_grandmother(X,Y):- female(X), parent(X,Z), parent(Z,M), parent(M,Y).
+great_grandfather(X,Y):- male(X), parent(X,Z), parent(Z,M), parent(M,Y).
+
+cousin(X,Y):- parent(Z,X),parent(M,Y),(sister(Z,M);sister(M,Z);(brother(Z,M);brother(M,Z))).
+
+ancestor(X,Y) :- parent(X,Y) ; (parent(X,Z), ancestor(Z,Y)).
+descendant(X,Y) :- parent(Y,X) ; (parent(Z,X), descendant(Z,Y)).
+
+?- ancestor(mykola_tryhub, Child).
+%?- descendant(marta_tryhub,mykola_tryhub).
+
+
+
+

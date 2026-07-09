@@ -1,0 +1,189 @@
+% структура запису:
+% movie(ID, title(Original, Translated), 
+%       release_info(Year, Country), 
+%       crew(director(Name), [actor(Name, Role)]), 
+%       genres([Genre1, Genre2, ...]), 
+%       rating(Score), 
+%       extra_info(award(Name, Year)) або 'none').
+
+movie(1, title('Inception', 'Початок'), release_info(2010, 'USA'),
+      crew(director('Christopher Nolan'), [actor('Leonardo DiCaprio', 'Cobb'), actor('Joseph Gordon-Levitt', 'Arthur')]),
+      genres(['sci-fi', 'thriller']), rating(8.8), award('Oscar', 2011)).
+
+movie(2, title('Parasite', 'Паразити'), release_info(2019, 'South Korea'),
+      crew(director('Bong Joon-ho'), [actor('Song Kang-ho', 'Kim Ki-taek'), actor('Choi Woo-shik', 'Kim Ki-woo')]),
+      genres(['drama', 'thriller']), rating(8.6), award('Oscar', 2020)).
+
+movie(3, title('Interstellar', 'Інтерстеллар'), release_info(2014, 'USA'),
+      crew(director('Christopher Nolan'), [actor('Matthew McConaughey', 'Cooper'), actor('Anne Hathaway', 'Brand')]),
+      genres(['sci-fi', 'drama']), rating(8.6), 'none').
+
+movie(4, title('The Godfather', 'Хрещений батько'), release_info(1972, 'USA'),
+      crew(director('Francis Ford Coppola'), [actor('Marlon Brando', 'Vito'), actor('Al Pacino', 'Michael')]),
+      genres(['crime', 'drama']), rating(9.2), award('Oscar', 1973)).
+
+movie(5, title('Spirited Away', 'Віднесені привидами'), release_info(2001, 'Japan'),
+      crew(director('Hayao Miyazaki'), [actor('Rumi Hiiragi', 'Chihiro'), actor('Miyu Irino', 'Haku')]),
+      genres(['animation', 'fantasy']), rating(8.6), award('Oscar', 2003)).
+
+movie(6, title('Titanic', 'Титанік'), release_info(1997, 'USA'),
+      crew(director('James Cameron'), [actor('Leonardo DiCaprio', 'Jack'), actor('Kate Winslet', 'Rose')]),
+      genres(['romance', 'drama']), rating(7.9), award('Oscar', 1998)).
+
+movie(7, title('The Matrix', 'Матриця'), release_info(1999, 'USA'),
+      crew(director('Lana Wachowski'), [actor('Keanu Reeves', 'Neo'), actor('Laurence Fishburne', 'Morpheus')]),
+      genres(['sci-fi', 'action']), rating(8.7), 'none').
+
+movie(8, title('Amélie', 'Амелі'), release_info(2001, 'France'),
+      crew(director('Jean-Pierre Jeunet'), [actor('Audrey Tautou', 'Amélie'), actor('Mathieu Kassovitz', 'Nino')]),
+      genres(['romance', 'comedy']), rating(8.3), 'none').
+
+movie(9, title('The Dark Knight', 'Темний лицар'), release_info(2008, 'USA'),
+      crew(director('Christopher Nolan'), [actor('Christian Bale', 'Bruce'), actor('Heath Ledger', 'Joker')]),
+      genres(['action', 'crime']), rating(9.0), award('Oscar', 2009)).
+
+movie(10, title('Forrest Gump', 'Форрест Гамп'), release_info(1994, 'USA'),
+      crew(director('Robert Zemeckis'), [actor('Tom Hanks', 'Forrest'), actor('Robin Wright', 'Jenny')]),
+      genres(['drama', 'romance']), rating(8.8), award('Oscar', 1995)).
+
+movie(11, title('Whiplash', 'Одержимість'), release_info(2014, 'USA'),
+      crew(director('Damien Chazelle'), [actor('Miles Teller', 'Andrew'), actor('J.K. Simmons', 'Fletcher')]),
+      genres(['drama', 'music']), rating(8.5), award('Oscar', 2015)).
+
+movie(12, title('Coco', 'Коко'), release_info(2017, 'USA'),
+      crew(director('Lee Unkrich'), [actor('Anthony Gonzalez', 'Miguel'), actor('Gael García Bernal', 'Héctor')]),
+      genres(['animation', 'family']), rating(8.4), award('Oscar', 2018)).
+
+movie(13, title('Joker', 'Джокер'), release_info(2019, 'USA'),
+      crew(director('Todd Phillips'), [actor('Joaquin Phoenix', 'Arthur'), actor('Robert De Niro', 'Murray')]),
+      genres(['drama', 'crime']), rating(8.4), award('Oscar', 2020)).
+
+movie(14, title('Soul', 'Душа'), release_info(2020, 'USA'),
+      crew(director('Pete Docter'), [actor('Jamie Foxx', 'Joe'), actor('Tina Fey', '22')]),
+      genres(['animation', 'fantasy']), rating(8.1), award('Oscar', 2021)).
+
+movie(15, title('1917', '1917'), release_info(2019, 'UK'),
+      crew(director('Sam Mendes'), [actor('George MacKay', 'Schofield'), actor('Dean-Charles Chapman', 'Blake')]),
+      genres(['war', 'drama']), rating(8.3), 'none').
+
+movie(16, title('Dune', 'Дюна'), release_info(2021, 'USA'),
+      crew(director('Denis Villeneuve'), [actor('Timothée Chalamet', 'Paul'), actor('Zendaya', 'Chani')]),
+      genres(['sci-fi', 'adventure']), rating(8.0), award('Oscar', 2022)).
+
+movie(17, title('The Grand Budapest Hotel', 'Готель Гранд Будапешт'), release_info(2014, 'USA'),
+      crew(director('Wes Anderson'), [actor('Ralph Fiennes', 'Gustave'), actor('Tony Revolori', 'Zero')]),
+      genres(['comedy', 'drama']), rating(8.1), award('Oscar', 2015)).
+
+movie(18, title('La La Land', 'Ла-Ла Ленд'), release_info(2016, 'USA'),
+      crew(director('Damien Chazelle'), [actor('Ryan Gosling', 'Sebastian'), actor('Emma Stone', 'Mia')]),
+      genres(['romance', 'music']), rating(8.0), award('Oscar', 2017)).
+
+movie(19, title('Arrival', 'Прибуття'), release_info(2016, 'USA'),
+      crew(director('Denis Villeneuve'), [actor('Amy Adams', 'Louise'), actor('Jeremy Renner', 'Ian')]),
+      genres(['sci-fi', 'drama']), rating(7.9), 'none').
+
+movie(20, title('The Lion King', 'Король Лев'), release_info(1994, 'USA'),
+      crew(director('Roger Allers'), [actor('Matthew Broderick', 'Simba'), actor('James Earl Jones', 'Mufasa')]),
+      genres(['animation', 'adventure']), rating(8.5), award('Oscar', 1995)).
+
+movie(21, title('Toy Story', 'Історія іграшок'), release_info(1995, 'USA'),
+      crew(director('John Lasseter'), [actor('Tom Hanks', 'Woody'), actor('Tim Allen', 'Buzz')]),
+      genres(['animation', 'comedy']), rating(8.3), award('Oscar', 1996)).
+
+movie(22, title('The Social Network', 'Соціальна мережа'), release_info(2010, 'USA'),
+      crew(director('David Fincher'), [actor('Jesse Eisenberg', 'Mark'), actor('Andrew Garfield', 'Eduardo')]),
+      genres(['drama', 'biography']), rating(7.7), award('Oscar', 2011)).
+
+% утиліти та селектори
+% перекладена назва фільму
+get_movie_title(ID, Title) :- movie(ID, title(_, Title), _, _, _, _, _).
+
+% оригінальна назва фільму
+get_movie_original_title(ID, Original) :- movie(ID, title(Original, _), _, _, _, _, _).
+
+% режисер фільму
+get_movie_director(ID, Director) :- movie(ID, _, _, crew(director(Director), _), _, _, _).
+
+% список акторів фільму
+get_movie_actors(ID, Actors) :- movie(ID, _, _, crew(_, Actors), _, _, _).
+
+% перевірка, чи фільм має певний жанр
+has_genre(ID, Genre) :- movie(ID, _, _, _, genres(Genres), _, _), member(Genre, Genres).
+
+% перевірка, чи фільм отримав нагороду
+has_award(ID) :- movie(ID, _, _, _, _, _, award(_, _)).
+
+% рейтинг фільму
+get_rating(ID, Rating) :- movie(ID, _, _, _, _, rating(Rating), _).
+
+% 1. знаходження всіх фільмів з жанром 'sci-fi'
+find_sci_fi_movies(IDs) :- findall(ID, has_genre(ID, 'sci-fi'), IDs).
+
+% 2. отримання акторів фільму за назвою
+get_actors_by_title(Title, Actors) :- movie(ID, title(_, Title), _, _, _, _, _), get_movie_actors(ID, Actors).
+
+% 3. знаходження всіх фільмів, які отримали нагороду
+find_awarded_movies(IDs) :- findall(ID, has_award(ID), IDs).
+
+% 4. знаходження фільму з найвищим рейтингом
+highest_rated_movie(ID, Rating) :- findall(Rating-ID, get_rating(ID, Rating), Pairs), keysort(Pairs, Sorted), reverse(Sorted, [Rating-ID|_]).
+
+% 5. виведення всіх фільмів з акторами
+print_all_movies :-
+    movie(ID, title(Orig, Trans), release_info(Y, C), crew(director(D), Actors), genres(Gs), rating(R), Extra),
+    format('~n[~w] ~w (~w), ~w, ~w~n', [ID, Trans, Orig, Y, C]),
+    format('Режисер: ~w~n', [D]),
+    format('Актори: ~w~n', [Actors]),
+    format('Жанри: ~w~n', [Gs]),
+    format('Рейтинг: ~w~n', [R]),
+    format('Додаткова інформація: ~w~n', [Extra]),
+    fail.
+print_all_movies.
+
+% обробка всіх фільмів через findall
+get_all_titles(Titles) :- findall(Title, get_movie_title(_, Title), Titles).
+
+% рекурсивний перебір усіх фільмів
+process_movies_recursively :- movie(ID, _, _, _, _, _, _), get_movie_title(ID, Title), format('Фільм: ~w~n', [Title]), fail.
+process_movies_recursively.
+
+% збір усіх рейтингів у список
+get_all_ratings(Ratings) :- findall(R, get_rating(_, R), Ratings).
+
+% обчислення середнього рейтингу
+average_rating(Average) :- get_all_ratings(Ratings), sum_list(Ratings, Sum), length(Ratings, Count), Count > 0, Average is Sum / Count.
+
+% знаходження останнього фільму (за найбільшим ID)
+terminal_movie(ID, Title) :-
+    findall(I, movie(I, _, _, _, _, _, _), IDs),
+    last(IDs, ID),
+    get_movie_title(ID, Title).
+
+movie_2020(ID, Year) :- movie(ID, _, _, _, _, _, award(_, Year)).
+
+
+
+
+
+/** <examples>
+?- get_movie_title(1, Title).
+?- get_movie_original_title(2, Original).
+?- get_movie_director(3, Director).
+?- get_movie_actors(4, Actors).
+?- has_genre(5, 'fantasy').
+?- has_genre(5, Genre).
+?- has_award(6).
+?- get_rating(7, R).
+
+?- find_sci_fi_movies(ID).
+?- get_actors_by_title('Темний лицар', Actors).
+?- find_awarded_movies(ID).
+?- highest_rated_movie(ID, Rating).
+?- print_all_movies.
+
+?- get_all_titles(Titles).
+?- process_movies_recursively.
+?- get_all_ratings(Ratings).
+?- average_rating(Average).
+?- terminal_movie(ID, Title).
+*/
