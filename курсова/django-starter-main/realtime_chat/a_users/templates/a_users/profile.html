@@ -1,0 +1,28 @@
+{% extends 'layouts/blank.html' %}
+
+{% block content %}
+
+<div class="max-w-lg mx-auto flex flex-col items-center pt-20 px-4">
+    <div class="bg-white shadow-md rounded-lg p-6 w-full"> <!-- Додано плашку -->
+        <div class="flex justify-center mb-4">
+            <img class="w-36 h-36 rounded-full object-cover" src="{{ profile.avatar }}" />
+        </div>
+        <div class="text-center">
+            <h1 class="text-2xl font-bold">{{ profile.displayname }}</h1>
+            <div class="text-gray-400 mb-2">@{{ profile.user.username }}</div>
+            
+            {% if profile.age %}
+            <p class="text-gray-600">Вік: {{ profile.age }} років</p>
+            {% endif %}
+            
+            {% if profile.info %}
+            <p class="mt-4">{{ profile.info|linebreaksbr }}</p>
+            {% endif %}
+        </div>
+        <div class="text-center mt-6">
+            <a href="{% url 'profile-edit' %}" class="button button-primary">Редагувати інформацію</a> <!-- Кнопка для редагування -->
+        </div>
+    </div>
+</div>
+
+{% endblock %}

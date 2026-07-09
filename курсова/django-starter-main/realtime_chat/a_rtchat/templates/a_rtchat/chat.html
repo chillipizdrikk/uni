@@ -1,0 +1,54 @@
+{% extends 'layouts/blank.html' %}
+
+{% block content %}
+
+<wrapper class="block max-w-4xl mx-auto my-10 px-6"> 
+    <div id="chat_window" class="h-[50rem] flex flex-col bg-emerald-800 rounded-3xl shadow-2xl relative p-4"> 
+        <div class="flex justify-center text-emerald-300 bg-emerald-800 p-3 sticky top-0 z-10 rounded-t-3xl">
+            <div id="online-icon"></div>
+            <span id="online-count" class="pr-1"></span>онлайн
+        </div>
+        <div id='chat_container' class="overflow-y-auto grow border-t border-emerald-700 p-4">
+            <ul id='chat_messages' class="flex flex-col justify-end gap-4">
+                {% for message in chat_messages reversed %}
+                {% include 'a_rtchat/chat_message.html' %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="sticky bottom-0 z-10 p-3 bg-emerald-800 rounded-b-3xl">
+            <div class="flex items-center rounded-xl px-3 py-2 bg-emerald-700">
+                <form id="chat_message_form" class="w-full flex gap-2"
+                    hx-ext="ws"
+                    ws-connect="/ws/chatroom/public-chat"
+                    ws-send
+                    _="on htmx:wsAfterSend reset() me">
+                    {% csrf_token %}
+                    <div class="flex-1">
+                        {{ form }}
+                    </div>
+                    <button type="submit" 
+                            class="px-3 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors duration-200 flex items-center justify-center">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</wrapper>
+
+{% endblock %}
+
+
+{% block javascript %}
+<script>
+
+    function scrollToBottom() {
+        const container = document.getElementById('chat_container');
+        container.scrollTop = container.scrollHeight;
+    }
+    scrollToBottom()
+
+</script>
+{% endblock %}
