@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="Database">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Customers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Customer" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CustomerID" type="xs:int"/>
+										<xs:element name="CustomerName">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="100"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Address" type="xs:string"/>
+										<xs:element name="BankAccount">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="\d{14}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Orders">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Order" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="OrderID" type="xs:int"/>
+																<xs:element name="TotalPrice">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:decimal">
+																			<xs:minInclusive value="0.00"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="DeliveryMethod">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:enumeration value="Express"/>
+																			<xs:enumeration value="Standard"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="Goods">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="Good" maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="GoodID" type="xs:int"/>
+																						<xs:element name="GoodName" type="xs:string"/>
+																						<xs:element name="Price">
+																							<xs:simpleType>
+																								<xs:restriction base="xs:decimal">
+																									<xs:minInclusive value="0.00"/>
+																								</xs:restriction>
+																							</xs:simpleType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Suppliers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Supplier" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SupplierID" type="xs:int"/>
+										<xs:element name="SupplierName">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="100"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="PhoneNumber">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="\d{10}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Address" type="xs:string"/>
+										<xs:element name="Email" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

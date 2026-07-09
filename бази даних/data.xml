@@ -1,0 +1,143 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<Database>
+	<Customers>
+		<Customer>
+			<CustomerID>1</CustomerID>
+			<CustomerName>Customer 1</CustomerName>
+			<Address>123 Main St, City, Country</Address>
+			<BankAccount>12345678901234</BankAccount>
+			<Orders>
+				<Order>
+					<OrderID>1</OrderID>
+					<TotalPrice>50.00</TotalPrice>
+					<DeliveryMethod>Express</DeliveryMethod>
+					<Goods>
+						<Good>
+							<GoodID>1</GoodID>
+							<GoodName>Good 1</GoodName>
+							<Price>10.99</Price>
+						</Good>
+					</Goods>
+				</Order>
+			</Orders>
+		</Customer>
+		<Customer>
+			<CustomerID>2</CustomerID>
+			<CustomerName>Customer 2</CustomerName>
+			<Address>456 Elm St, Town, Country</Address>
+			<BankAccount>56789012345678</BankAccount>
+			<Orders>
+				<Order>
+					<OrderID>2</OrderID>
+					<TotalPrice>75.50</TotalPrice>
+					<DeliveryMethod>Standard</DeliveryMethod>
+					<Goods>
+						<Good>
+							<GoodID>2</GoodID>
+							<GoodName>Good 2</GoodName>
+							<Price>20.50</Price>
+						</Good>
+					</Goods>
+				</Order>
+			</Orders>
+		</Customer>
+		<Customer>
+			<CustomerID>3</CustomerID>
+			<CustomerName>Customer 3</CustomerName>
+			<Address>789 Oak St, Village, Country</Address>
+			<BankAccount>98765432109876</BankAccount>
+			<Orders>
+				<Order>
+					<OrderID>3</OrderID>
+					<TotalPrice>20.00</TotalPrice>
+					<DeliveryMethod>Express</DeliveryMethod>
+					<Goods>
+						<Good>
+							<GoodID>3</GoodID>
+							<GoodName>Good 3</GoodName>
+							<Price>15.75</Price>
+						</Good>
+					</Goods>
+				</Order>
+			</Orders>
+		</Customer>
+		<Customer>
+			<CustomerID>4</CustomerID>
+			<CustomerName>Customer 4</CustomerName>
+			<Address>321 Pine St, Town, Country</Address>
+			<BankAccount>54321098765432</BankAccount>
+			<Orders>
+				<Order>
+					<OrderID>4</OrderID>
+					<TotalPrice>100.75</TotalPrice>
+					<DeliveryMethod>Standard</DeliveryMethod>
+					<Goods>
+						<Good>
+							<GoodID>4</GoodID>
+							<GoodName>Good 4</GoodName>
+							<Price>5.25</Price>
+						</Good>
+					</Goods>
+				</Order>
+			</Orders>
+		</Customer>
+		<Customer>
+			<CustomerID>5</CustomerID>
+			<CustomerName>Customer 5</CustomerName>
+			<Address>654 Maple St, City, Country</Address>
+			<BankAccount>67890123456789</BankAccount>
+			<Orders>
+				<Order>
+					<OrderID>5</OrderID>
+					<TotalPrice>150.00</TotalPrice>
+					<DeliveryMethod>Express</DeliveryMethod>
+					<Goods>
+						<Good>
+							<GoodID>5</GoodID>
+							<GoodName>Good 5</GoodName>
+							<Price>50.00</Price>
+						</Good>
+					</Goods>
+				</Order>
+			</Orders>
+		</Customer>
+	</Customers>
+	<Suppliers>
+		<Supplier>
+			<SupplierID>1</SupplierID>
+			<SupplierName>Supplier 1</SupplierName>
+			<PhoneNumber>1112223333</PhoneNumber>
+			<Address>789 Oak St, Village, Country</Address>
+			<Email>supplier1@example.com</Email>
+		</Supplier>
+		<Supplier>
+			<SupplierID>2</SupplierID>
+			<SupplierName>Supplier 2</SupplierName>
+			<PhoneNumber>4445556666</PhoneNumber>
+			<Address>321 Pine St, Town, Country</Address>
+			<Email>supplier2@example.com</Email>
+		</Supplier>
+		<Supplier>
+			<SupplierID>3</SupplierID>
+			<SupplierName>Supplier 3</SupplierName>
+			<PhoneNumber>9998887777</PhoneNumber>
+			<Address>654 Maple St, City, Country</Address>
+			<Email>supplier3@example.com</Email>
+		</Supplier>
+		<Supplier>
+			<SupplierID>4</SupplierID>
+			<SupplierName>Supplier 4</SupplierName>
+			<PhoneNumber>5554443333</PhoneNumber>
+			<Address>876 Birch St, Town, Country</Address>
+			<Email>supplier4@example.com</Email>
+		</Supplier>
+		<Supplier>
+			<SupplierID>5</SupplierID>
+			<SupplierName>Supplier 5</SupplierName>
+			<PhoneNumber>3332221111</PhoneNumber>
+			<Address>123 Cedar St, Village, Country</Address>
+			<Email>supplier5@example.com</Email>
+		</Supplier>
+	</Suppliers>
+</Database>
