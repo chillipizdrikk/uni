@@ -1,0 +1,82 @@
+ANNA: Mom, Dad, I've been thinking more about that custom PC. It's like building my own spaceship because I entered the university!
+
+DAD: Well, it's an investment in your future, What did you find out?    
+
+ANNA:  I talked to  my  friend. They recommended to contact a consultant in the store and he will help me with this choice
+
+MOM:  Those sound like good choices. So let’s go.
+
+ In a Computer store 
+
+CONSULTANT: Good day! How can I assist you today?
+
+MOM: Good day! We're here to help our daughter choose a computer for her studies. She's studying in the IT field and needs a powerful PC.
+
+ANNA: Yes, I need a reliable computer that can handle programming and work with large projects.
+
+DAD: We were also wondering if it's possible to build a computer ourselves, selecting individual parts?
+
+CONSULTANT: Of course, we can help you build a computer exactly like that. It'll allow you to have more control over the configuration and select the optimal components for your budget and needs.
+
+MOM: Excellent, but we're not very familiar with the parts that make up a computer. Can you assist us?
+
+CONSULTANT: Absolutely, I can help you with that. What a budget?
+
+DAD: 1200.Can you find something suitable?
+
+CONSULTANT:Yes,of course. So lets start to choose your perfect PC.The main components you'll need include a processor, graphics card, motherboard, RAM, storage (SSD nctional PC.
+
+DAD: Can we get an approximate cost for each of these parts?
+
+CONSULTANT: Yes, approximate prices can vary between manufacturers and depend on the model and specifications. However, if you'd like, I can give you some ballpark figures.
+
+CONSULTANT:Let's begin with the processor, also known as the CPU. For your budget, I recommend a mid-range option like the AMD Ryzen 5. It offers excellent performance for both work and gaming.
+
+MOM:  Why Ryzen 5?
+
+CONSULTANT: Ryzen 5 strikes a balance between cost and performance. It's a solid choice for a versatile computing experience.
+
+ANNA: I trust your expertise. What's next?
+
+
+CONSULTANT: Now, let's talk about the graphics card or GPU. The NVIDIA GeForce GTX 1660 Super is a solid choice for gaming without breaking the bank. It'll handle your gaming needs well.
+
+ANNA: That sounds perfect! What kind of games can I play with it?
+
+CONSULTANT: It can handle most modern games at high settings, ensuring a smooth gaming experience.
+
+DAD:  As long as it doesn't turn our living room into a gaming zone!
+
+CONSULTANT: For memory, or RAM, I'd suggest 16GB of DDR4. It's the sweet spot for multitasking and gaming. As for storage, a combination of a 500GB SSD for speed and a 1TB HDD for additional storage is a balanced choice.
+
+ANNA: Thanks! This is so helpful. What's next?
+
+CONSULTANT: Great choices! Now, let's add a power supply unit with a wattage that comfortably supports your components. We also need a motherboard that's compatible with your CPU and GPU. For the case, consider one with good airflow to keep things cool.
+
+MOM: What’s next?
+
+CONSULTANT: Let's break down the prices for the components. The AMD Ryzen 5 processor typically costs around $250, and the NVIDIA GeForce GTX 1660 Super graphics card is priced at approximately $300.
+
+For the 16GB DDR4 RAM, you're looking at about $80, and the 500GB SSD might be around $70, while the 1TB HDD is approximately $50. The power supply unit and the compatible motherboard can vary, but budgeting around $80 for each should be reasonable.
+
+Now, let's talk about peripherals. For a good monitor, consider the [ASUS VG279Q](example.com/asusmonitor), priced around $300. A reliable gaming mouse like the [Logitech G502 HERO](example.com/g502hero) could cost approximately $50, and a mechanical keyboard such as the [Corsair K55 RGB](example.com/k55rgb) might be around $50.
+
+DAD: Those prices seem reasonable. What do you think, Anna?
+
+ANNA: Sounds good to me! Let's add those to the list.
+
+CONSULTANT: Excellent choices! 
+Now you're all set for a powerful PC setup. Enjoy your building process and feel free to reach out if you have any more questions!
+
+DAD:  Let's go with those recommendations.
+
+CONSULTANT: Here's a loyalty card for future purchases. Don't forget, I'm here to assist if you need help during the assembly.
+
+MOM: Thank you! This has been a great experience.
+
+CONSULTANT: My pleasure! Enjoy building your new PC. If you have any questions, don't hesitate to ask.
+
+
+
+
+
