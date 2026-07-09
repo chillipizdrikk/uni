@@ -1,0 +1,70 @@
+[2025-10-26 14:34:43 UTC] Початок сценарію: моделювання митного контролю для вантажних авто.
+[2025-10-26 14:34:43 UTC] Завантаження вхідних декларацій у системний список (не в чергу).
+[2025-10-26 14:34:43 UTC] Розподіл перших 10 авто: деякі у green corridor (спрощено за умовою).
+[2025-10-26 14:34:43 UTC] ENQUEUE to green_corridor: plate=D1093AH, goods=Electronics
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=B204XZ, goods=Automobile parts
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=AA123BB, goods=Textiles
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=TRK-998, goods=Fruits
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=KD-555, goods=Grains
+[2025-10-26 14:34:43 UTC] ENQUEUE to green_corridor: plate=PLT-77, goods=Machinery
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=ZZ9991, goods=Furniture
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=GHT-321, goods=Paper
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=MK-2020, goods=Chemicals
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=OP-444, goods=Textiles
+[2025-10-26 14:34:43 UTC] ENQUEUE to green_corridor: plate=TR-111, goods=Electronics
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=AV-777, goods=Pharmaceuticals
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=OD-500, goods=Seafood
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=QW-908, goods=Metal scraps
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=PL-321, goods=Grains
+[2025-10-26 14:34:43 UTC] ENQUEUE to green_corridor: plate=LM-404, goods=Machinery
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=ED-808, goods=Electronics
+[2025-10-26 14:34:43 UTC] ENQUEUE to general: plate=PR-009, goods=Explosives
+[2025-10-26 14:34:43 UTC] Операція: завершити огляд (dequeue) 2 авто з зеленого коридору.
+[2025-10-26 14:34:43 UTC] DEQUEUE from green_corridor: plate=D1093AH - дозвіл на перетин кордону (проїхав).
+[2025-10-26 14:34:43 UTC] DEQUEUE from green_corridor: plate=PLT-77 - дозвіл на перетин кордону (проїхав).
+[2025-10-26 14:34:43 UTC] Операція: перемістити авто 'TRK-998' з general до green_corridor.
+[2025-10-26 14:34:43 UTC] MOVE plate TRK-998 to green_corridor: owner=BlackSeaFreight, goods=Fruits
+[2025-10-26 14:34:43 UTC] Операція: видалити авто 'OP-444' (документи невалідні) з general.
+[2025-10-26 14:34:43 UTC] REMOVE plate OP-444 from general: owner=QuickMove, reason=documents invalid
+[2025-10-26 14:34:43 UTC] Операція: список авто, що везуть 'Electronics' у general.
+[2025-10-26 14:34:43 UTC] Electronics in general: pos=11, plate=ED-808, owner=EastLink, value=18000.0
+[2025-10-26 14:34:43 UTC] Операція: авто з найвищою вартістю товару в green_corridor.
+[2025-10-26 14:34:43 UTC] MAX VALUE in green_corridor: plate=LM-404, goods=Machinery, value=35000.0
+[2025-10-26 14:34:43 UTC] Операція: підсумок товарів у general (goods_summary).
+[2025-10-26 14:34:43 UTC] SUMMARY general: goods=Automobile parts, total_value=15000.0
+[2025-10-26 14:34:43 UTC] SUMMARY general: goods=Textiles, total_value=8000.0
+[2025-10-26 14:34:43 UTC] SUMMARY general: goods=Grains, total_value=22000.0
+[2025-10-26 14:34:43 UTC] SUMMARY general: goods=Furniture, total_value=7000.0
+[2025-10-26 14:34:43 UTC] SUMMARY general: goods=Paper, total_value=2200.0
+[2025-10-26 14:34:43 UTC] SUMMARY general: goods=Chemicals, total_value=50000.0
+[2025-10-26 14:34:43 UTC] SUMMARY general: goods=Pharmaceuticals, total_value=45000.0
+[2025-10-26 14:34:43 UTC] SUMMARY general: goods=Seafood, total_value=6000.0
+[2025-10-26 14:34:43 UTC] SUMMARY general: goods=Metal scraps, total_value=3000.0
+[2025-10-26 14:34:43 UTC] SUMMARY general: goods=Electronics, total_value=18000.0
+[2025-10-26 14:34:43 UTC] SUMMARY general: goods=Explosives, total_value=0.0
+[2025-10-26 14:34:43 UTC] Операція: які авто в general прямують до Одеси?
+[2025-10-26 14:34:43 UTC] To Odessa in general: pos=2, plate=AA123BB, owner=LogiX, dest=('Ukraine', 'Odessa')
+[2025-10-26 14:34:43 UTC] To Odessa in general: pos=8, plate=OD-500, owner=OdessaTrans, dest=('Ukraine', 'Odessa')
+[2025-10-26 14:34:43 UTC] To Odessa in general: pos=11, plate=ED-808, owner=EastLink, dest=('Ukraine', 'Odessa')
+[2025-10-26 14:34:43 UTC] Додаткова операція: перевірка на наявність небезпечних вантажів в обох чергах.
+[2025-10-26 14:34:43 UTC] Hazardous in general: pos=6, plate=MK-2020, hazard=['flammable']
+[2025-10-26 14:34:43 UTC] Hazardous in general: pos=7, plate=AV-777, hazard=['controlled_substance']
+[2025-10-26 14:34:43 UTC] Hazardous in general: pos=12, plate=PR-009, hazard=['explosive']
+[2025-10-26 14:34:43 UTC] No hazardous items in green_corridor.
+[2025-10-26 14:34:43 UTC] Додаткова операція: пріоритизувати plate 'AV-777' в general (перемістити на початок).
+[2025-10-26 14:34:43 UTC] Prioritize AV-777: done.
+[2025-10-26 14:34:43 UTC] Додаткова операція: отримати історію огляду для 'PR-009'.
+[2025-10-26 14:34:43 UTC] Inspection history stub for PR-009: {'plate': 'PR-009', 'past_inspections': [{'date': '2025-03-12', 'result': 'clean'}, {'date': '2024-11-02', 'result': 'minor_issue'}], 'flags': []}
+[2025-10-26 14:34:43 UTC] Тепер демонструємо некоректні операції (очікувані помилки) для протоколу.
+[2025-10-26 14:34:43 UTC] ERROR: duplicate enqueue succeeded unexpectedly.
+[2025-10-26 14:34:43 UTC] Expected NotFoundError caught: Plate NO-SUCH-PLATE not found in queue general
+[2025-10-26 14:34:43 UTC] Очищаємо green_corridor і пробуємо ще один dequeue (має виникнути помилка).
+[2025-10-26 14:34:43 UTC] green_corridor cleaned.
+[2025-10-26 14:34:43 UTC] Expected NotFoundError caught on extra dequeue: Queue green_corridor is empty
+[2025-10-26 14:34:43 UTC] Тест переміщення у переповнену чергу: створимо міні-чергу з max_size=1 і спробуємо move_plate_to.
+[2025-10-26 14:34:43 UTC] small.enqueue succeeded.
+[2025-10-26 14:34:43 UTC] Expected QueueFullError caught: Destination queue small is full
+[2025-10-26 14:34:43 UTC] Підсумок: розмір черг по завершенні сценарію.
+[2025-10-26 14:34:43 UTC] general size: 13
+[2025-10-26 14:34:43 UTC] green_corridor size: 0
+[2025-10-26 14:34:43 UTC] Кінець сценарію.

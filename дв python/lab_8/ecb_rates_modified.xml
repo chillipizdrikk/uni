@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:Envelope xmlns:ns0="http://www.gesmes.org/xml/2002-08-01" xmlns:ns1="http://www.ecb.int/vocabulary/2002-08-01/eurofxref" processed_by="task4_processing.py" processed_at="2025-11-23T17:35:23.231197Z">
+	<ns0:subject>Reference rates</ns0:subject>
+	<ns0:Sender>
+		<ns0:name>European Central Bank</ns0:name>
+	</ns0:Sender>
+	<ns1:Cube>
+		<ns1:Cube time="2025-11-21">
+			<ns1:Cube currency="USD" rate="1.1520" />
+			<ns1:Cube currency="JPY" rate="180.56" />
+			<ns1:Cube currency="BGN" rate="1.9558" />
+			<ns1:Cube currency="CZK" rate="24.235" />
+			<ns1:Cube currency="DKK" rate="7.4687" />
+			<ns1:Cube currency="GBP" rate="0.88030" />
+			<ns1:Cube currency="HUF" rate="383.43" />
+			<ns1:Cube currency="PLN" rate="4.2448" />
+			<ns1:Cube currency="RON" rate="5.0896" />
+			<ns1:Cube currency="SEK" rate="11.0260" />
+			<ns1:Cube currency="CHF" rate="0.9289" />
+			<ns1:Cube currency="ISK" rate="147.20" />
+			<ns1:Cube currency="NOK" rate="11.7940" />
+			<ns1:Cube currency="TRY" rate="48.8961" />
+			<ns1:Cube currency="AUD" rate="1.7873" />
+			<ns1:Cube currency="BRL" rate="6.1879" />
+			<ns1:Cube currency="CAD" rate="1.6226" />
+			<ns1:Cube currency="CNY" rate="8.1905" />
+			<ns1:Cube currency="HKD" rate="8.9679" />
+			<ns1:Cube currency="IDR" rate="19258.85" />
+			<ns1:Cube currency="ILS" rate="3.7816" />
+			<ns1:Cube currency="INR" rate="103.2628" />
+			<ns1:Cube currency="KRW" rate="1698.38" />
+			<ns1:Cube currency="MXN" rate="21.2561" />
+			<ns1:Cube currency="MYR" rate="4.7796" />
+			<ns1:Cube currency="NZD" rate="2.0560" />
+			<ns1:Cube currency="PHP" rate="67.817" />
+			<ns1:Cube currency="SGD" rate="1.5065" />
+			<ns1:Cube currency="THB" rate="37.382" />
+			<ns1:Cube currency="ZAR" rate="19.9970" />
+		</ns1:Cube>
+	</ns1:Cube>
+</ns0:Envelope>

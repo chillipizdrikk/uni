@@ -1,0 +1,70 @@
+
+[RUN] Task 1 at C:/Users/msh1t/file_tools_sandbox/task1
+Task 1: Scanning folder: C:/Users/msh1t/file_tools_sandbox/task1
+
+Full list (sorted by creation time):
+a.txt                          2025-11-09 14:07:31 size=44B
+b.txt                          2025-11-09 14:07:31 size=44B
+notes.doc                      2025-11-09 14:07:31 size=48B
+data.csv                       2025-11-09 14:07:31 size=47B
+image.jpg                      2025-11-09 14:07:31 size=48B
+script.py                      2025-11-09 14:07:31 size=48B
+report.pdf                     2025-11-09 14:07:31 size=49B
+x.bin                          2025-11-09 14:07:31 size=44B
+z.log                          2025-11-09 14:07:31 size=44B
+alpha.txt                      2025-11-09 14:07:31 size=48B
+readme.md                      2025-11-09 14:07:31 size=48B
+
+Two oldest:
+a.txt                          2025-11-09 14:07:31
+b.txt                          2025-11-09 14:07:31
+
+Two newest:
+alpha.txt                      2025-11-09 14:07:31
+readme.md                      2025-11-09 14:07:31
+------------------------------------------------------------
+
+[RUN] Task 2 comparing C:/Users/msh1t/file_tools_sandbox/task2/folderA and C:/Users/msh1t/file_tools_sandbox/task2/folderB
+Task 2: Comparing folders:
+  A: C:/Users/msh1t/file_tools_sandbox/task2/folderA
+  B: C:/Users/msh1t/file_tools_sandbox/task2/folderB
+
+Duplicates found (name, size):
+dup1.txt                       26 bytes  locations: C:/Users/msh1t/file_tools_sandbox/task2/folderA\dup1.txt , C:/Users/msh1t/file_tools_sandbox/task2/folderB\dup1.txt
+dup2.bin                       100 bytes  locations: C:/Users/msh1t/file_tools_sandbox/task2/folderA\dup2.bin , C:/Users/msh1t/file_tools_sandbox/task2/folderB\dup2.bin
+shared.md                      10 bytes  locations: C:/Users/msh1t/file_tools_sandbox/task2/folderA\shared.md , C:/Users/msh1t/file_tools_sandbox/task2/folderB\shared.md
+------------------------------------------------------------
+
+[RUN] Task 3 in C:/Users/msh1t/file_tools_sandbox/task3/sub1 for .py
+Task 3: Listing *.py files in immediate subfolders of C:/Users/msh1t/file_tools_sandbox/task3/sub1
+No files with extension .py found in immediate subfolders.
+------------------------------------------------------------
+
+[RUN] Task 3 in C:/Users/msh1t/file_tools_sandbox/task3 for .py
+Task 3: Listing *.py files in immediate subfolders of C:/Users/msh1t/file_tools_sandbox/task3
+Found 3 files with extension .py:
+C:/Users/msh1t/file_tools_sandbox/task3\sub1\file_0.py
+C:/Users/msh1t/file_tools_sandbox/task3\sub3\file_0.py
+C:/Users/msh1t/file_tools_sandbox/task3\sub4\file_5.py
+------------------------------------------------------------
+
+[RUN] Task 4 in C:/Users/msh1t/file_tools_sandbox/task4  simulate=True
+Task 4: Splitting files by type in folder: C:/Users/msh1t/file_tools_sandbox/task4
+Detected types: txt, py, jpg
+Preparing folder for .txt: C:/Users/msh1t/file_tools_sandbox/task4\folder_txt  (files: 4)
+Copied task4_0.txt -> C:/Users/msh1t/file_tools_sandbox/task4\folder_txt
+Copied task4_3.txt -> C:/Users/msh1t/file_tools_sandbox/task4\folder_txt
+Copied task4_6.txt -> C:/Users/msh1t/file_tools_sandbox/task4\folder_txt
+Copied task4_9.txt -> C:/Users/msh1t/file_tools_sandbox/task4\folder_txt
+Preparing folder for .py: C:/Users/msh1t/file_tools_sandbox/task4\folder_py  (files: 4)
+Copied task4_1.py -> C:/Users/msh1t/file_tools_sandbox/task4\folder_py
+Copied task4_10.py -> C:/Users/msh1t/file_tools_sandbox/task4\folder_py
+Copied task4_4.py -> C:/Users/msh1t/file_tools_sandbox/task4\folder_py
+Copied task4_7.py -> C:/Users/msh1t/file_tools_sandbox/task4\folder_py
+Preparing folder for .jpg: C:/Users/msh1t/file_tools_sandbox/task4\folder_jpg  (files: 3)
+Copied task4_2.jpg -> C:/Users/msh1t/file_tools_sandbox/task4\folder_jpg
+Copied task4_5.jpg -> C:/Users/msh1t/file_tools_sandbox/task4\folder_jpg
+Copied task4_8.jpg -> C:/Users/msh1t/file_tools_sandbox/task4\folder_jpg
+Task 4 completed.
+------------------------------------------------------------
+
