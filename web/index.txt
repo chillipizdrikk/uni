@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Progress</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+        integrity="sha384-KYFX9WSDTz6/UerfBoDkwBu25nYoZ9lQTeoohHlGyHrnF6mZ6HT5N2n5Hhd0BiqC"
+        crossorigin="anonymous"></script>
+    <style>
+        .progress-bar {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 13px;
+            padding: 3px;
+            margin-top: 20px;
+        }
+
+        .progress-bar-fill {
+            height: 20px;
+            width: 0%;
+            background-color: #4caf50;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Task Progress</h1>
+
+    <!-- Форма реєстрації -->
+    <h2>Register</h2>
+    <form id="registerForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- Форма входу -->
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="emailLogin">Email:</label>
+        <input type="email" id="emailLogin" name="email" required>
+        <label for="passwordLogin">Password:</label>
+        <input type="password" id="passwordLogin" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <div id="taskContainer"></div>
+
+    <script>
+        const socket = io();
+        let authToken = '';
+
+        // Реєстрація користувача
+        $('#registerForm').submit(function (event) {
+            event.preventDefault();
+            const userData = {
+                username: $('#username').val(),
+                email: $('#email').val(),
+                password: $('#password').val()
+            };
+            $.post('/api/auth/register', userData, function (data) {
+                alert('User registered successfully');
+            }).fail(function (response) {
+                alert('Failed to register: ' + response.responseJSON.error);
+            });
+        });
+
+        // Вхід користувача
+        $('#loginForm').submit(function (event) {
+            event.preventDefault();
+            const loginData = {
+                email: $('#emailLogin').val(),
+                password: $('#passwordLogin').val()
+            };
+            $.post('/api/auth/login', loginData, function (data) {
+                authToken = data.token;
+                alert('Logged in successfully');
+            }).fail(function (response) {
+                alert('Failed to login: ' + response.responseJSON.error);
+            });
+        });
+
+        $('#taskForm').submit(function (event) {
+            event.preventDefault();
+            const number = $('#number').val();
+            $.ajax({
+                url: '/api/tasks/factorial',
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${authToken}`
+                },
+                data: { number },
+                success: function (data) {
+                    const taskId = data.taskId;
+                    const progressBar = `<div id="task-${taskId}" class="progress-bar">
+                                            <div class="progress-bar-fill" id="fill-${taskId}">0%</div>
+                                         </div>`;
+                    $('#taskContainer').append(progressBar);
+                    socket.emit('startTask', taskId);
+                }
+            });
+        });
+
+        socket.on('progressUpdate', function (data) {
+            const { taskId, progress } = data;
+            const fill = $(`#fill-${taskId}`);
+            fill.css('width', `${progress}%`).text(`${progress}%`);
+        });
+
+        socket.on('taskComplete', function (data) {
+            const { taskId, result } = data;
+            const fill = $(`#fill-${taskId}`);
+            fill.css('width', '100%').text(`Complete: ${result}`);
+        });
+    </script>
+</body>
+
+</html>
