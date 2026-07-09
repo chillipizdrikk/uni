@@ -1,0 +1,74 @@
+{
+  "shapes": [
+    {
+      "type": "line",
+      "x1": 68,
+      "y1": 144,
+      "x2": 67,
+      "y2": 458,
+      "line_color": "#0080ff",
+      "fill_color": "#ff0080",
+      "line_width": 2
+    },
+    {
+      "type": "rect",
+      "x1": 172,
+      "y1": 120,
+      "x2": 500,
+      "y2": 335,
+      "line_color": "#0080ff",
+      "fill_color": "#ff0080",
+      "line_width": 7
+    },
+    {
+      "type": "ellipse",
+      "x1": 600,
+      "y1": 358,
+      "x2": 847,
+      "y2": 585,
+      "line_color": "#0080ff",
+      "fill_color": "#8000ff",
+      "line_width": 7
+    },
+    {
+      "type": "ellipse",
+      "x1": 601,
+      "y1": 79,
+      "x2": 753,
+      "y2": 231,
+      "line_color": "#0080ff",
+      "fill_color": "#8000ff",
+      "line_width": 7
+    },
+    {
+      "type": "ellipse",
+      "x1": 157,
+      "y1": 479,
+      "x2": 291,
+      "y2": 610,
+      "line_color": "#0080ff",
+      "fill_color": "#8000ff",
+      "line_width": 7
+    },
+    {
+      "type": "rect",
+      "x1": 383,
+      "y1": 410,
+      "x2": 533,
+      "y2": 522,
+      "line_color": "#0080ff",
+      "fill_color": "#8000ff",
+      "line_width": 7
+    },
+    {
+      "type": "rect",
+      "x1": 843,
+      "y1": 86,
+      "x2": 915,
+      "y2": 264,
+      "line_color": "#0080ff",
+      "fill_color": "#8000ff",
+      "line_width": 7
+    }
+  ]
+}
