@@ -1,0 +1,11 @@
+10
+P Antonov An132 430 75
+C Nissan skyline 5250 1995
+C Nissan 140sx 4040 2004
+P MotorSich An140 340 105
+D Mazda Miata 2430 1988
+P Antonov An77 250 150
+C Lamborghini diablo 3400 1990
+P MotorSich An188 200 50
+M Bugatti Chiron 4500 2004
+C Lamborghini huracan 5200 2005

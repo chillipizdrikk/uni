@@ -1,0 +1,9 @@
+Suares,Manchester,10
+Shevchenko,Manchester,14
+Iniesta,Barcelona,16
+Maradona,Barcelona,18
+Ronaldo,Manchester,20
+Pele,Juventus,22
+Levandovsky,Juventus,24
+Messi,Barcelona,30
+Neymar,Juventus,40

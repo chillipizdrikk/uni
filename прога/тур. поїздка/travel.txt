@@ -1,0 +1,11 @@
+10
+NewYork USA 5 15430
+Paris France 3 2005
+Kyiv Ukraine 3 3050
+Paris France 5 10200
+Chicago USA 5 12005
+Kyiv Ukraine 2 1000
+Ternopil Ukraine 1 1150
+Lisabon Portugal 7 7800
+NewYork USA 3 9090
+Striy Ukraine 2 2300

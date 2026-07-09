@@ -1,0 +1,9 @@
+Paris 2130907
+London 9002488
+Madrid 3305400
+Brussels 200000
+Paris 2130907
+Ottawa 1017500
+Madrid 3305400
+Brussels 200000
+Paris 2130907

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkExample.CustomStackVsSystemStackBenchmark-20240425-110434</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3447/23H2/2023Update/SunValley3)
+Intel Core i7-1065G7 CPU 1.30GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK 8.0.104
+  [Host]     : .NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+  DefaultJob : .NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method        </th><th>Mean    </th><th>Error  </th><th>StdDev </th><th>Median  </th>
+</tr>
+</thead><tbody><tr><td>CustomStack_Push</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td>
+</tr><tr><td>SystemStack_Push</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td>
+</tr><tr><td>CustomStack_Peek</td><td>17.782 &mu;s</td><td>0.5769 &mu;s</td><td>1.6736 &mu;s</td><td>16.819 &mu;s</td>
+</tr><tr><td>SystemStack_Peek</td><td>7.594 &mu;s</td><td>0.1065 &mu;s</td><td>0.0889 &mu;s</td><td>7.568 &mu;s</td>
+</tr><tr><td>CustomStack_Contains</td><td>178,068.862 &mu;s</td><td>3,138.2227 &mu;s</td><td>3,613.9819 &mu;s</td><td>177,703.167 &mu;s</td>
+</tr><tr><td>SystemStack_Contains</td><td>14,518.022 &mu;s</td><td>184.6669 &mu;s</td><td>172.7375 &mu;s</td><td>14,475.117 &mu;s</td>
+</tr></tbody></table>
+</body>
+</html>

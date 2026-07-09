@@ -1,0 +1,4 @@
+3
+Milk 30.5 10
+Chocolate 27.8 5
+Apple 52 3

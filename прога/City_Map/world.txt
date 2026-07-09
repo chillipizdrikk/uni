@@ -1,0 +1,6 @@
+France Paris 2130907
+UK London 9002488
+Spain Madrid 3305400
+Belgium Brussels 200000
+Canada Ottawa 1017500
+Ukraine Kyiv 4000000

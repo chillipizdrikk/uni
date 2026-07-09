@@ -1,0 +1,15 @@
+Name: Tanya
+Surname: Medvid
+Group: PMI-31
+Grade: 59
+
+Name: Oleksandra
+Surname: Hrutsak
+Group: PMI-31
+Grade: 76
+
+Name: Stepan
+Surname: Bandera
+Group: PMI-31
+Grade: 81
+

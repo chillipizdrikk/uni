@@ -1,0 +1,20 @@
+Name: Marta
+Surname: Tryhub
+Group: PMI-16
+Grade: 95
+
+Name: Ulyana
+Surname: Zahoruiko
+Group: PMI-16
+Grade: 90
+
+Name: Anna
+Surname: Dopko
+Group: PMI-16
+Grade: 85
+
+Name: Max
+Surname: Ratushnuy
+Group: PMI-16
+Grade: 78
+

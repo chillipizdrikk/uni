@@ -1,0 +1,15 @@
+Name: Marta
+Surname: Tatsyn
+Group: PMI-23
+Grade: 89
+
+Name: Natalya
+Surname: Herus
+Group: PMI-23
+Grade: 65
+
+Name: Sviatoslas
+Surname: Tarasiuk
+Group: PMI-23
+Grade: 87
+

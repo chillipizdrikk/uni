@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Multiple_UberCar", "Multiple_UberCar.vcxproj", "{F49FBCD0-F3AC-41E0-8C1F-7FF96DAAFE2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F49FBCD0-F3AC-41E0-8C1F-7FF96DAAFE2A}.Debug|x64.ActiveCfg = Debug|x64
+		{F49FBCD0-F3AC-41E0-8C1F-7FF96DAAFE2A}.Debug|x64.Build.0 = Debug|x64
+		{F49FBCD0-F3AC-41E0-8C1F-7FF96DAAFE2A}.Debug|x86.ActiveCfg = Debug|Win32
+		{F49FBCD0-F3AC-41E0-8C1F-7FF96DAAFE2A}.Debug|x86.Build.0 = Debug|Win32
+		{F49FBCD0-F3AC-41E0-8C1F-7FF96DAAFE2A}.Release|x64.ActiveCfg = Release|x64
+		{F49FBCD0-F3AC-41E0-8C1F-7FF96DAAFE2A}.Release|x64.Build.0 = Release|x64
+		{F49FBCD0-F3AC-41E0-8C1F-7FF96DAAFE2A}.Release|x86.ActiveCfg = Release|Win32
+		{F49FBCD0-F3AC-41E0-8C1F-7FF96DAAFE2A}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0EEC74D-0910-4909-83E8-D557C618C3F2}
+	EndGlobalSection
+EndGlobal

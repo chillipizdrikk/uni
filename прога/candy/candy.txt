@@ -1,0 +1,11 @@
+10
+Syaivo 172 0.25
+Korivka 105 0.12
+Rachok 124 0.45
+Toffix 143 0.38
+Rosher 116 0.51
+Dyushes 135 0.23
+Sharm 164 0.27
+Trufalie 158 0.57
+Lapki 110 0.89
+Rafaello 186 0.74

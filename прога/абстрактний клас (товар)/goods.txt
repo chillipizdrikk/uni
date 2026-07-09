@@ -1,0 +1,8 @@
+7
+C Svitoch Trufel 1.02 65.5
+D Bosch Multitool 2001
+C Roshen MonBlan 0.5 50.1
+M Bosch WashingMachine 2301
+D Samsung Fen 870.5
+K Roshen Korivka 2.5 45.7
+C Nestle Baunti 0.3 32.6

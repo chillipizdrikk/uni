@@ -1,0 +1,5 @@
+Kvasy,Dzembronya,8,8,12,18,12
+Dzembronya,PipIvan,5,7,12,18
+VusokuyKamin,Pikuy,10,8,9,10,8,10
+Pikuy,Parashka,10,7,8,11
+Gemba,Kvasy,5,7,12,16,20

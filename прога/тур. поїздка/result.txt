@@ -1,0 +1,11 @@
+10
+Kyiv8224Ukraine 2 1000
+Ternopil8224Ukraine 1 1150
+Paris8224France 3 2005
+Striy8224Ukraine 2 2300
+Kyiv8224Ukraine 3 3050
+Lisabon8224Portugal 7 7800
+NewYork8224USA 3 9090
+Paris8224France 5 10200
+Chicago8224USA 5 12005
+NewYork8224USA 5 15430

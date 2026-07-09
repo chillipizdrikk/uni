@@ -1,0 +1,11 @@
+10
+Ferrari enzo 1994
+Ferrari f70 2013
+Ferrari sf90 2022
+Lamborghini diablo 1990
+Lamborghini huracan 2005
+Lamborghini urus 1997
+Lamborghini aventador 2011
+Nissan skyline 1995
+Nissan 140sx 2004
+Nissan gtr 2007
