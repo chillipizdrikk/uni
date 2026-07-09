@@ -1,0 +1,49 @@
+classDiagram
+    class User {
+        -int id
+        -String username
+        -String email
+        -String password
+        -DateTime created_at
+        +createBudget()
+        +makeTransaction()
+        +getRecommendations()
+    }
+    
+    class Budget {
+        -int id
+        -String title
+        -String description
+        -decimal total_amount
+        -String type
+        -int user_id
+        -DateTime created_at
+        +addTransaction()
+        +calculateBalance()
+        +updateAmount()
+    }
+    
+    class Transaction {
+        -int id
+        -int user_id
+        -int budget_id
+        -DateTime created_at
+        -String type
+        -decimal amount
+        -String description
+        +getBudget()
+        +getUser()
+    }
+    
+    class Recommendation {
+        -int id
+        -int user_id
+        -String description
+        +getUser()
+        +apply()
+    }
+    
+    User "1" -- "0..*" Budget : creates
+    User "1" -- "0..*" Transaction : performs
+    User "1" -- "0..*" Recommendation : receives
+    Budget "1" -- "0..*" Transaction : contains
